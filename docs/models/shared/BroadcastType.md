@@ -1,7 +1,5 @@
 # BroadcastType
 
-the type of broadcast
-
 
 ## Values
 

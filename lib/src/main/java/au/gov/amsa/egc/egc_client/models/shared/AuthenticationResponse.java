@@ -11,9 +11,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.time.OffsetDateTime;
 
-/**
- * AuthenticationResponse - token and expiry time
- */
 
 public class AuthenticationResponse {
     /**

@@ -484,11 +484,10 @@ public class Application {
                 startTimeMinInclusive = true;
                 status = new au.gov.amsa.egc.egc_client.models.shared.Status[]{{
                     add(Status.ACTIVE),
-                    add(Status.ACTIVE),
                 }};
             }};            
 
-            GetMsisResponse res = sdk.egc.getMsis(req, new GetMsisSecurity("minus") {{
+            GetMsisResponse res = sdk.egc.getMsis(req, new GetMsisSecurity("molestiae") {{
                 bearer = "";
             }});
 
@@ -590,7 +589,7 @@ public class Application {
 
             SendMsiRequest req = new SendMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            SendMsiResponse res = sdk.egc.sendMsi(req, new SendMsiSecurity("placeat") {{
+            SendMsiResponse res = sdk.egc.sendMsi(req, new SendMsiSecurity("minus") {{
                 bearer = "";
             }});
 

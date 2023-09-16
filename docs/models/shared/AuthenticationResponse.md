@@ -1,7 +1,5 @@
 # AuthenticationResponse
 
-token and expiry time
-
 
 ## Fields
 

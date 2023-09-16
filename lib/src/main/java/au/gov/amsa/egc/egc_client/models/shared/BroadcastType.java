@@ -6,9 +6,6 @@ package au.gov.amsa.egc.egc_client.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- * BroadcastType - the type of broadcast
- */
 public enum BroadcastType {
     SAR_BROADCAST("SARBroadcast"),
     MET_BROADCAST("MetBroadcast"),
