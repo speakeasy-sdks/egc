@@ -1,4 +1,4 @@
-# GetMsiStatusSecurity
+# Security
 
 
 ## Fields

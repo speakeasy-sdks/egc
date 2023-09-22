@@ -205,19 +205,20 @@ package hello.world;
 import au.gov.amsa.egc.egc_client.Egc;
 import au.gov.amsa.egc.egc_client.models.operations.CancelMsiRequest;
 import au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse;
-import au.gov.amsa.egc.egc_client.models.operations.CancelMsiSecurity;
+import au.gov.amsa.egc.egc_client.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
+                .setSecurity(new Security("distinctio") {{
+                    bearer = "";
+                }})
                 .build();
 
             CancelMsiRequest req = new CancelMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            CancelMsiResponse res = sdk.egc.cancelMsi(req, new CancelMsiSecurity("provident") {{
-                bearer = "";
-            }});
+            CancelMsiResponse res = sdk.egc.cancelMsi(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -231,10 +232,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [au.gov.amsa.egc.egc_client.models.operations.CancelMsiRequest](../../models/operations/CancelMsiRequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [au.gov.amsa.egc.egc_client.models.operations.CancelMsiSecurity](../../models/operations/CancelMsiSecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [au.gov.amsa.egc.egc_client.models.operations.CancelMsiRequest](../../models/operations/CancelMsiRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
@@ -260,7 +260,6 @@ package hello.world;
 
 import au.gov.amsa.egc.egc_client.Egc;
 import au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse;
-import au.gov.amsa.egc.egc_client.models.operations.CreateMsiSecurity;
 import au.gov.amsa.egc.egc_client.models.shared.Circle;
 import au.gov.amsa.egc.egc_client.models.shared.IntervalHours;
 import au.gov.amsa.egc.egc_client.models.shared.MetArea;
@@ -278,6 +277,7 @@ import au.gov.amsa.egc.egc_client.models.shared.Repetition;
 import au.gov.amsa.egc.egc_client.models.shared.SARBroadcast;
 import au.gov.amsa.egc.egc_client.models.shared.SARPriority;
 import au.gov.amsa.egc.egc_client.models.shared.SARServiceType;
+import au.gov.amsa.egc.egc_client.models.shared.Security;
 import au.gov.amsa.egc.egc_client.models.shared.SubjectIndicator;
 import java.time.OffsetDateTime;
 
@@ -285,15 +285,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
+                .setSecurity(new Security("quibusdam") {{
+                    bearer = "";
+                }})
                 .build();
 
-            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent(                new NavBroadcast(                new NavArea(437587) {{
-                                                navAreaCode = 384382;
+            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent(                new NavBroadcast(                new NavArea(891773) {{
+                                                navAreaCode = 297534;
                                             }}, NonSARPriority.URGENCY) {{
-                                navBroadcastArea = new NavCoastalWarningArea("illum", 423655, SubjectIndicator.AIS) {{
-                                    coastalWarningAreaCode = "unde";
-                                    navAreaCode = 857946;
-                                    subjectIndicator = SubjectIndicator.PILOT_SERVICE_MESSAGES;
+                                navBroadcastArea = new NavCoastalWarningArea("error", 645894, SubjectIndicator.SATNAV_MESSAGES) {{
+                                    coastalWarningAreaCode = "corrupti";
+                                    navAreaCode = 847252;
+                                    subjectIndicator = SubjectIndicator.OTHER_ELECTRONIC_NAVAID_MESSAGES;
                                 }};
                                 priority = NonSARPriority.URGENCY;
                             }}, "a message to be broadcast") {{
@@ -301,13 +304,11 @@ public class Application {
                 endTime = OffsetDateTime.parse("2022-04-24T10:25:43.511Z");
                 readAcksEnabled = false;
                 receiveAcksEnabled = false;
-                repetition = new Repetition(IntervalHours.FIVE, NumRepetitions.TILL_CANCELLED);;
+                repetition = new Repetition(IntervalHours.ONE, NumRepetitions.TILL_CANCELLED);;
                 startTime = OffsetDateTime.parse("2022-04-23T10:30:43.511Z");
             }};            
 
-            CreateMsiResponse res = sdk.egc.createMsi(req, new CreateMsiSecurity("ipsa") {{
-                bearer = "";
-            }});
+            CreateMsiResponse res = sdk.egc.createMsi(req);
 
             if (res.msiId != null) {
                 // handle response
@@ -321,10 +322,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [au.gov.amsa.egc.egc_client.models.shared.MsiContent](../../models/shared/MsiContent.md)                       | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [au.gov.amsa.egc.egc_client.models.operations.CreateMsiSecurity](../../models/operations/CreateMsiSecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [au.gov.amsa.egc.egc_client.models.shared.MsiContent](../../models/shared/MsiContent.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
@@ -345,19 +345,20 @@ package hello.world;
 import au.gov.amsa.egc.egc_client.Egc;
 import au.gov.amsa.egc.egc_client.models.operations.GetMsiRequest;
 import au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse;
-import au.gov.amsa.egc.egc_client.models.operations.GetMsiSecurity;
+import au.gov.amsa.egc.egc_client.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
+                .setSecurity(new Security("tempora") {{
+                    bearer = "";
+                }})
                 .build();
 
             GetMsiRequest req = new GetMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            GetMsiResponse res = sdk.egc.getMsi(req, new GetMsiSecurity("delectus") {{
-                bearer = "";
-            }});
+            GetMsiResponse res = sdk.egc.getMsi(req);
 
             if (res.msi != null) {
                 // handle response
@@ -371,10 +372,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [au.gov.amsa.egc.egc_client.models.operations.GetMsiRequest](../../models/operations/GetMsiRequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [au.gov.amsa.egc.egc_client.models.operations.GetMsiSecurity](../../models/operations/GetMsiSecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [au.gov.amsa.egc.egc_client.models.operations.GetMsiRequest](../../models/operations/GetMsiRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
@@ -395,19 +395,20 @@ package hello.world;
 import au.gov.amsa.egc.egc_client.Egc;
 import au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusRequest;
 import au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse;
-import au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusSecurity;
+import au.gov.amsa.egc.egc_client.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
+                .setSecurity(new Security("suscipit") {{
+                    bearer = "";
+                }})
                 .build();
 
             GetMsiStatusRequest req = new GetMsiStatusRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            GetMsiStatusResponse res = sdk.egc.getMsiStatus(req, new GetMsiStatusSecurity("tempora") {{
-                bearer = "";
-            }});
+            GetMsiStatusResponse res = sdk.egc.getMsiStatus(req);
 
             if (res.statusExtended != null) {
                 // handle response
@@ -421,10 +422,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusRequest](../../models/operations/GetMsiStatusRequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusSecurity](../../models/operations/GetMsiStatusSecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusRequest](../../models/operations/GetMsiStatusRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -459,8 +459,8 @@ package hello.world;
 import au.gov.amsa.egc.egc_client.Egc;
 import au.gov.amsa.egc.egc_client.models.operations.GetMsisRequest;
 import au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse;
-import au.gov.amsa.egc.egc_client.models.operations.GetMsisSecurity;
 import au.gov.amsa.egc.egc_client.models.shared.BroadcastType;
+import au.gov.amsa.egc.egc_client.models.shared.Security;
 import au.gov.amsa.egc.egc_client.models.shared.Status;
 import java.time.OffsetDateTime;
 
@@ -468,6 +468,9 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
+                .setSecurity(new Security("molestiae") {{
+                    bearer = "";
+                }})
                 .build();
 
             GetMsisRequest req = new GetMsisRequest() {{
@@ -477,7 +480,7 @@ public class Application {
                 endTimeMaxInclusive = true;
                 endTimeMin = OffsetDateTime.parse("2022-04-21T18:25:43.511Z");
                 endTimeMinInclusive = true;
-                limit = 383441;
+                limit = 791725;
                 startTimeMax = OffsetDateTime.parse("2022-04-24T23:25:43.511Z");
                 startTimeMaxInclusive = true;
                 startTimeMin = OffsetDateTime.parse("2022-04-20T18:25:43.511Z");
@@ -487,9 +490,7 @@ public class Application {
                 }};
             }};            
 
-            GetMsisResponse res = sdk.egc.getMsis(req, new GetMsisSecurity("molestiae") {{
-                bearer = "";
-            }});
+            GetMsisResponse res = sdk.egc.getMsis(req);
 
             if (res.getMsis200ApplicationJSONObject != null) {
                 // handle response
@@ -503,10 +504,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [au.gov.amsa.egc.egc_client.models.operations.GetMsisRequest](../../models/operations/GetMsisRequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [au.gov.amsa.egc.egc_client.models.operations.GetMsisSecurity](../../models/operations/GetMsisSecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [au.gov.amsa.egc.egc_client.models.operations.GetMsisRequest](../../models/operations/GetMsisRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -529,11 +529,15 @@ package hello.world;
 import au.gov.amsa.egc.egc_client.Egc;
 import au.gov.amsa.egc.egc_client.models.operations.GetTokenResponse;
 import au.gov.amsa.egc.egc_client.models.shared.AuthenticationRequestBody;
+import au.gov.amsa.egc.egc_client.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
+                .setSecurity(new Security("placeat") {{
+                    bearer = "";
+                }})
                 .build();
 
             au.gov.amsa.egc.egc_client.models.shared.AuthenticationRequestBody req = new AuthenticationRequestBody("a-nice-strong-password", "myrcc") {{
@@ -579,19 +583,20 @@ package hello.world;
 import au.gov.amsa.egc.egc_client.Egc;
 import au.gov.amsa.egc.egc_client.models.operations.SendMsiRequest;
 import au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse;
-import au.gov.amsa.egc.egc_client.models.operations.SendMsiSecurity;
+import au.gov.amsa.egc.egc_client.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
+                .setSecurity(new Security("voluptatum") {{
+                    bearer = "";
+                }})
                 .build();
 
             SendMsiRequest req = new SendMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            SendMsiResponse res = sdk.egc.sendMsi(req, new SendMsiSecurity("minus") {{
-                bearer = "";
-            }});
+            SendMsiResponse res = sdk.egc.sendMsi(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -605,10 +610,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [au.gov.amsa.egc.egc_client.models.operations.SendMsiRequest](../../models/operations/SendMsiRequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [au.gov.amsa.egc.egc_client.models.operations.SendMsiSecurity](../../models/operations/SendMsiSecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [au.gov.amsa.egc.egc_client.models.operations.SendMsiRequest](../../models/operations/SendMsiRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response

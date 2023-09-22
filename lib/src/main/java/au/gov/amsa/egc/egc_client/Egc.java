@@ -234,6 +234,16 @@ public class Egc {
 		}
 		
 		/**
+		 * Configures the SDK to use the provided security details.
+		 * @param security The security details to use for all requests.
+		 * @return The builder instance.
+		 */
+		public Builder setSecurity(au.gov.amsa.egc.egc_client.models.shared.Security security) {
+			this.sdkConfiguration.security = security;
+			return this;
+		}
+		
+		/**
 		 * Allows the overriding of the default server URL.
 		 * @param serverUrl The server URL to use for all requests.
 		 * @return The builder instance.
@@ -275,6 +285,10 @@ public class Egc {
 				this.sdkConfiguration.defaultClient = new SpeakeasyHTTPClient();
 			}
 			
+			if (this.sdkConfiguration.security != null) {
+				this.sdkConfiguration.securityClient = au.gov.amsa.egc.egc_client.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, this.sdkConfiguration.security);
+			}
+			
 			if (this.sdkConfiguration.securityClient == null) {
 				this.sdkConfiguration.securityClient = this.sdkConfiguration.defaultClient;
 			}
@@ -313,11 +327,10 @@ public class Egc {
      * are still available to be queried.
      * 
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse cancelMsi(au.gov.amsa.egc.egc_client.models.operations.CancelMsiRequest request, au.gov.amsa.egc.egc_client.models.operations.CancelMsiSecurity security) throws Exception {
+    public au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse cancelMsi(au.gov.amsa.egc.egc_client.models.operations.CancelMsiRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = au.gov.amsa.egc.egc_client.utils.Utils.generateURL(au.gov.amsa.egc.egc_client.models.operations.CancelMsiRequest.class, baseUrl, "/msi/{id}", request, null);
         
@@ -328,7 +341,7 @@ public class Egc {
         req.addHeader("Accept", "application/json;q=1, text/*;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = au.gov.amsa.egc.egc_client.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -420,11 +433,10 @@ public class Egc {
      * maximum number of unsent messages so it can be documented here). 
      * 
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse createMsi(au.gov.amsa.egc.egc_client.models.shared.MsiContent request, au.gov.amsa.egc.egc_client.models.operations.CreateMsiSecurity security) throws Exception {
+    public au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse createMsi(au.gov.amsa.egc.egc_client.models.shared.MsiContent request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = au.gov.amsa.egc.egc_client.utils.Utils.generateURL(baseUrl, "/msi");
         
@@ -440,7 +452,7 @@ public class Egc {
         req.addHeader("Accept", "application/json;q=1, text/*;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = au.gov.amsa.egc.egc_client.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -518,11 +530,10 @@ public class Egc {
      * Returns the details of an MSI broadcast using the unique MSI identifier.
      * 
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse getMsi(au.gov.amsa.egc.egc_client.models.operations.GetMsiRequest request, au.gov.amsa.egc.egc_client.models.operations.GetMsiSecurity security) throws Exception {
+    public au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse getMsi(au.gov.amsa.egc.egc_client.models.operations.GetMsiRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = au.gov.amsa.egc.egc_client.utils.Utils.generateURL(au.gov.amsa.egc.egc_client.models.operations.GetMsiRequest.class, baseUrl, "/msi/{id}", request, null);
         
@@ -533,7 +544,7 @@ public class Egc {
         req.addHeader("Accept", "application/json;q=1, text/*;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = au.gov.amsa.egc.egc_client.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -625,11 +636,10 @@ public class Egc {
      * Returns the status of an MSI broadcast using the unique MSI identifier.
      * 
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse getMsiStatus(au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusRequest request, au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusSecurity security) throws Exception {
+    public au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse getMsiStatus(au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = au.gov.amsa.egc.egc_client.utils.Utils.generateURL(au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusRequest.class, baseUrl, "/msi/{id}/status", request, null);
         
@@ -640,7 +650,7 @@ public class Egc {
         req.addHeader("Accept", "application/json;q=1, text/*;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = au.gov.amsa.egc.egc_client.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -746,11 +756,10 @@ public class Egc {
      * client-side. **TODO** confirm expectations
      * 
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse getMsis(au.gov.amsa.egc.egc_client.models.operations.GetMsisRequest request, au.gov.amsa.egc.egc_client.models.operations.GetMsisSecurity security) throws Exception {
+    public au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse getMsis(au.gov.amsa.egc.egc_client.models.operations.GetMsisRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = au.gov.amsa.egc.egc_client.utils.Utils.generateURL(baseUrl, "/msi");
         
@@ -767,7 +776,7 @@ public class Egc {
             }
         }
         
-        HTTPClient client = au.gov.amsa.egc.egc_client.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -867,7 +876,8 @@ public class Egc {
         req.addHeader("Accept", "application/json;q=1, text/*;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = this.sdkConfiguration.defaultClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -934,11 +944,10 @@ public class Egc {
      * nothing occurs (this method is idempotent). 
      * 
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse sendMsi(au.gov.amsa.egc.egc_client.models.operations.SendMsiRequest request, au.gov.amsa.egc.egc_client.models.operations.SendMsiSecurity security) throws Exception {
+    public au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse sendMsi(au.gov.amsa.egc.egc_client.models.operations.SendMsiRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = au.gov.amsa.egc.egc_client.utils.Utils.generateURL(au.gov.amsa.egc.egc_client.models.operations.SendMsiRequest.class, baseUrl, "/msi/{id}", request, null);
         
@@ -949,7 +958,7 @@ public class Egc {
         req.addHeader("Accept", "application/json;q=1, text/*;q=0");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = au.gov.amsa.egc.egc_client.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
