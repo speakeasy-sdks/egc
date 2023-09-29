@@ -212,7 +212,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("distinctio") {{
+                .setSecurity(new Security("via") {{
                     bearer = "";
                 }})
                 .build();
@@ -286,18 +286,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("quibusdam") {{
+                .setSecurity(new Security("gray") {{
                     bearer = "";
                 }})
                 .build();
 
-            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent(                new NavBroadcast(                new NavArea(891773) {{
-                                                navAreaCode = 297534;
+            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent(                new PiracyBroadcast(                new Rectangle(6157.6f, 145.44f, -45.5f, 5404.94f) {{
+                                                heightDegrees = 3141.88f;
+                                                leftLon = 145.44f;
+                                                minLat = -45.5f;
+                                                widthDegrees = 1556.38f;
                                             }}, NonSARPriority.URGENCY) {{
-                                navBroadcastArea = new NavCoastalWarningArea("error", 645894, SubjectIndicator.SATNAV_MESSAGES) {{
-                                    coastalWarningAreaCode = "corrupti";
-                                    navAreaCode = 847252;
-                                    subjectIndicator = SubjectIndicator.OTHER_ELECTRONIC_NAVAID_MESSAGES;
+                                piracyBroadcastArea = new NavCoastalWarningArea("Credit", 485309, SubjectIndicator.OTHER_ELECTRONIC_NAVAID_MESSAGES) {{
+                                    coastalWarningAreaCode = "Dysprosium Ouguiya";
+                                    navAreaCode = 744563;
+                                    subjectIndicator = SubjectIndicator.PILOT_SERVICE_MESSAGES;
                                 }};
                                 priority = NonSARPriority.URGENCY;
                             }}, "a message to be broadcast") {{
@@ -305,7 +308,7 @@ public class Application {
                 endTime = OffsetDateTime.parse("2022-04-24T10:25:43.511Z");
                 readAcksEnabled = false;
                 receiveAcksEnabled = false;
-                repetition = new Repetition(IntervalHours.ONE, NumRepetitions.TILL_CANCELLED);;
+                repetition = new Repetition(IntervalHours.FORTY_EIGHT, NumRepetitions.TWICE);;
                 startTime = OffsetDateTime.parse("2022-04-23T10:30:43.511Z");
             }};            
 
@@ -352,7 +355,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("tempora") {{
+                .setSecurity(new Security("global") {{
                     bearer = "";
                 }})
                 .build();
@@ -402,7 +405,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("suscipit") {{
+                .setSecurity(new Security("insectarium") {{
                     bearer = "";
                 }})
                 .build();
@@ -469,7 +472,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("molestiae") {{
+                .setSecurity(new Security("invoice") {{
                     bearer = "";
                 }})
                 .build();
@@ -481,7 +484,7 @@ public class Application {
                 endTimeMaxInclusive = true;
                 endTimeMin = OffsetDateTime.parse("2022-04-21T18:25:43.511Z");
                 endTimeMinInclusive = true;
-                limit = 791725;
+                limit = 844052;
                 startTimeMax = OffsetDateTime.parse("2022-04-24T23:25:43.511Z");
                 startTimeMaxInclusive = true;
                 startTimeMin = OffsetDateTime.parse("2022-04-20T18:25:43.511Z");
@@ -536,7 +539,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("placeat") {{
+                .setSecurity(new Security("suscipit") {{
                     bearer = "";
                 }})
                 .build();
@@ -590,7 +593,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("voluptatum") {{
+                .setSecurity(new Security("Buckinghamshire") {{
                     bearer = "";
                 }})
                 .build();

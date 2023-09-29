@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'au.gov.amsa.egc.egc_client:egc:0.3.1'
+implementation 'au.gov.amsa.egc.egc_client:egc:0.4.0'
 ```
 <!-- End SDK Installation -->
 
@@ -30,7 +30,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("provident") {{
+                .setSecurity(new Security("via") {{
                     bearer = "";
                 }})
                 .build();
