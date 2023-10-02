@@ -41,7 +41,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'au.gov.amsa.egc'
             artifactId = 'egc-client'
-            version = '0.5.0'
+            version = '0.5.1'
 
             from components.java
 

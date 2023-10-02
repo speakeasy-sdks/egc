@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'au.gov.amsa.egc.egc_client:egc:0.5.0'
+implementation 'au.gov.amsa.egc.egc_client:egc:0.5.1'
 ```
 <!-- End SDK Installation -->
 
