@@ -212,7 +212,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("via") {{
+                .setSecurity(new Security("via"){{
                     bearer = "";
                 }})
                 .build();
@@ -261,54 +261,28 @@ package hello.world;
 
 import au.gov.amsa.egc.egc_client.Egc;
 import au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse;
-import au.gov.amsa.egc.egc_client.models.shared.Circle;
 import au.gov.amsa.egc.egc_client.models.shared.IntervalHours;
-import au.gov.amsa.egc.egc_client.models.shared.MetArea;
-import au.gov.amsa.egc.egc_client.models.shared.MetBroadcast;
-import au.gov.amsa.egc.egc_client.models.shared.MetCoastalWarningArea;
 import au.gov.amsa.egc.egc_client.models.shared.MsiContent;
-import au.gov.amsa.egc.egc_client.models.shared.NavArea;
-import au.gov.amsa.egc.egc_client.models.shared.NavBroadcast;
-import au.gov.amsa.egc.egc_client.models.shared.NavCoastalWarningArea;
-import au.gov.amsa.egc.egc_client.models.shared.NonSARPriority;
 import au.gov.amsa.egc.egc_client.models.shared.NumRepetitions;
-import au.gov.amsa.egc.egc_client.models.shared.PiracyBroadcast;
-import au.gov.amsa.egc.egc_client.models.shared.Rectangle;
 import au.gov.amsa.egc.egc_client.models.shared.Repetition;
-import au.gov.amsa.egc.egc_client.models.shared.SARBroadcast;
-import au.gov.amsa.egc.egc_client.models.shared.SARPriority;
-import au.gov.amsa.egc.egc_client.models.shared.SARServiceType;
 import au.gov.amsa.egc.egc_client.models.shared.Security;
-import au.gov.amsa.egc.egc_client.models.shared.SubjectIndicator;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("gray") {{
+                .setSecurity(new Security("gray"){{
                     bearer = "";
                 }})
                 .build();
 
-            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent(                new PiracyBroadcast(                new Rectangle(6157.6f, 145.44f, -45.5f, 5404.94f) {{
-                                                heightDegrees = 3141.88f;
-                                                leftLon = 145.44f;
-                                                minLat = -45.5f;
-                                                widthDegrees = 1556.38f;
-                                            }}, NonSARPriority.URGENCY) {{
-                                piracyBroadcastArea = new NavCoastalWarningArea("Credit", 485309, SubjectIndicator.OTHER_ELECTRONIC_NAVAID_MESSAGES) {{
-                                    coastalWarningAreaCode = "Dysprosium Ouguiya";
-                                    navAreaCode = 744563;
-                                    subjectIndicator = SubjectIndicator.PILOT_SERVICE_MESSAGES;
-                                }};
-                                priority = NonSARPriority.URGENCY;
-                            }}, "a message to be broadcast") {{
+            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent("scratchy", "a message to be broadcast"){{
                 echo = false;
                 endTime = OffsetDateTime.parse("2022-04-24T10:25:43.511Z");
                 readAcksEnabled = false;
                 receiveAcksEnabled = false;
-                repetition = new Repetition(IntervalHours.FORTY_EIGHT, NumRepetitions.TWICE);;
+                repetition = new Repetition(IntervalHours.SIX, NumRepetitions.TILL_CANCELLED);
                 startTime = OffsetDateTime.parse("2022-04-23T10:30:43.511Z");
             }};            
 
@@ -355,7 +329,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("global") {{
+                .setSecurity(new Security("global"){{
                     bearer = "";
                 }})
                 .build();
@@ -405,7 +379,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("insectarium") {{
+                .setSecurity(new Security("insectarium"){{
                     bearer = "";
                 }})
                 .build();
@@ -472,12 +446,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("invoice") {{
+                .setSecurity(new Security("invoice"){{
                     bearer = "";
                 }})
                 .build();
 
-            GetMsisRequest req = new GetMsisRequest() {{
+            GetMsisRequest req = new GetMsisRequest(){{
                 broadcastType = BroadcastType.SAR_BROADCAST;
                 continuationToken = "10";
                 endTimeMax = OffsetDateTime.parse("2022-04-25T14:18:23.000Z");
@@ -490,7 +464,8 @@ public class Application {
                 startTimeMin = OffsetDateTime.parse("2022-04-20T18:25:43.511Z");
                 startTimeMinInclusive = true;
                 status = new au.gov.amsa.egc.egc_client.models.shared.Status[]{{
-                    add(Status.ACTIVE),
+                    add(Status.CREATED),
+                    add(Status.CANCELLED),
                 }};
             }};            
 
@@ -539,12 +514,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("suscipit") {{
+                .setSecurity(new Security("suscipit"){{
                     bearer = "";
                 }})
                 .build();
 
-            au.gov.amsa.egc.egc_client.models.shared.AuthenticationRequestBody req = new AuthenticationRequestBody("a-nice-strong-password", "myrcc") {{
+            au.gov.amsa.egc.egc_client.models.shared.AuthenticationRequestBody req = new AuthenticationRequestBody("a-nice-strong-password", "myrcc"){{
                 validityMinutes = 60;
             }};            
 
@@ -593,7 +568,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("Buckinghamshire") {{
+                .setSecurity(new Security("Buckinghamshire"){{
                     bearer = "";
                 }})
                 .build();

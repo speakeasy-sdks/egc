@@ -13,7 +13,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("via") {{
+                .setSecurity(new Security("via"){{
                     bearer = "";
                 }})
                 .build();
