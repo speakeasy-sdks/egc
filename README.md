@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'au.gov.amsa.egc.egc_client:egc:0.5.2'
+implementation 'au.gov.amsa.egc.egc_client:egc:0.6.0'
 ```
 <!-- End SDK Installation -->
 
@@ -37,7 +37,7 @@ public class Application {
 
             CancelMsiRequest req = new CancelMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            CancelMsiResponse res = sdk.cancelMsi(req);
+            CancelMsiResponse res = sdk.egc.cancelMsi(req);
 
             if (res.statusCode == 200) {
                 // handle response
