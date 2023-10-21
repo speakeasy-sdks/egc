@@ -212,7 +212,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("via"){{
+                .setSecurity(new Security("string"){{
                     bearer = "";
                 }})
                 .build();
@@ -272,17 +272,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("gray"){{
+                .setSecurity(new Security("string"){{
                     bearer = "";
                 }})
                 .build();
 
-            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent("scratchy", "a message to be broadcast"){{
+            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent("string", "a message to be broadcast"){{
                 echo = false;
                 endTime = OffsetDateTime.parse("2022-04-24T10:25:43.511Z");
                 readAcksEnabled = false;
                 receiveAcksEnabled = false;
-                repetition = new Repetition(IntervalHours.SIX, NumRepetitions.TILL_CANCELLED);
+                repetition = new Repetition(IntervalHours.SIXTY, NumRepetitions.TILL_CANCELLED);
                 startTime = OffsetDateTime.parse("2022-04-23T10:30:43.511Z");
             }};            
 
@@ -329,7 +329,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("global"){{
+                .setSecurity(new Security("string"){{
                     bearer = "";
                 }})
                 .build();
@@ -379,7 +379,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("insectarium"){{
+                .setSecurity(new Security("string"){{
                     bearer = "";
                 }})
                 .build();
@@ -446,7 +446,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("invoice"){{
+                .setSecurity(new Security("string"){{
                     bearer = "";
                 }})
                 .build();
@@ -458,7 +458,7 @@ public class Application {
                 endTimeMaxInclusive = true;
                 endTimeMin = OffsetDateTime.parse("2022-04-21T18:25:43.511Z");
                 endTimeMinInclusive = true;
-                limit = 844052;
+                limit = 444337;
                 startTimeMax = OffsetDateTime.parse("2022-04-24T23:25:43.511Z");
                 startTimeMaxInclusive = true;
                 startTimeMin = OffsetDateTime.parse("2022-04-20T18:25:43.511Z");
@@ -514,7 +514,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("suscipit"){{
+                .setSecurity(new Security("string"){{
                     bearer = "";
                 }})
                 .build();
@@ -568,7 +568,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("Buckinghamshire"){{
+                .setSecurity(new Security("string"){{
                     bearer = "";
                 }})
                 .build();

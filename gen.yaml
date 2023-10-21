@@ -2,23 +2,24 @@ configVersion: 1.0.0
 management:
   docChecksum: 690ffd210b205fa6d398ef3fa587c1d5
   docVersion: 1.0-alpha
-  speakeasyVersion: 1.101.0
-  generationVersion: 2.161.0
+  speakeasyVersion: 1.104.0
+  generationVersion: 2.169.0
 generation:
   comments:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
+  repoURL: https://github.com/speakeasy-sdks/egc.git
   sdkClassName: egc
   singleTagPerOp: false
   tagNamespacingDisabled: false
 features:
   java:
-    core: 2.91.0
+    core: 2.94.0
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 java:
-  version: 0.8.0
+  version: 0.9.0
   artifactID: egc-client
   companyEmail: info@mycompany.com
   companyName: My Company
@@ -28,3 +29,5 @@ java:
   maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   projectName: egc
+  published: true
+  repoSubDirectory: .
