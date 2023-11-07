@@ -9,13 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GetMsis200ApplicationJSON - A list of MSIs and an optional continuation token (
+ * GetMsisResponseBody - A list of MSIs and an optional continuation token (
  * to retrieve the next page of MSIs). If the list of
  * MSIs is empty there should be no continuation token. 
  * 
  */
 
-public class GetMsis200ApplicationJSON {
+public class GetMsisResponseBody {
     /**
      * Indicates to the server the starting point of the next page 
      * of results. The token is not expected to be anywhere near as
@@ -26,7 +26,7 @@ public class GetMsis200ApplicationJSON {
     @JsonProperty("continuationToken")
     public String continuationToken;
 
-    public GetMsis200ApplicationJSON withContinuationToken(String continuationToken) {
+    public GetMsisResponseBody withContinuationToken(String continuationToken) {
         this.continuationToken = continuationToken;
         return this;
     }
@@ -34,12 +34,12 @@ public class GetMsis200ApplicationJSON {
     @JsonProperty("msis")
     public java.util.Map<String, Object>[] msis;
 
-    public GetMsis200ApplicationJSON withMsis(java.util.Map<String, Object>[] msis) {
+    public GetMsisResponseBody withMsis(java.util.Map<String, Object>[] msis) {
         this.msis = msis;
         return this;
     }
     
-    public GetMsis200ApplicationJSON(@JsonProperty("msis") java.util.Map<String, Object>[] msis) {
+    public GetMsisResponseBody(@JsonProperty("msis") java.util.Map<String, Object>[] msis) {
         this.msis = msis;
   }
 }

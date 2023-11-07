@@ -10,6 +10,61 @@ import java.net.http.HttpResponse;
 
 public class GetMsiStatusResponse {
     /**
+     * Bad request
+     */
+    
+    public String fourHundredTextWildcardRes;
+
+    public GetMsiStatusResponse withFourHundredTextWildcardRes(String fourHundredTextWildcardRes) {
+        this.fourHundredTextWildcardRes = fourHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unauthorized (must authenticate)
+     */
+    
+    public String fourHundredAndOneTextWildcardRes;
+
+    public GetMsiStatusResponse withFourHundredAndOneTextWildcardRes(String fourHundredAndOneTextWildcardRes) {
+        this.fourHundredAndOneTextWildcardRes = fourHundredAndOneTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Not allowed
+     */
+    
+    public String fourHundredAndThreeTextWildcardRes;
+
+    public GetMsiStatusResponse withFourHundredAndThreeTextWildcardRes(String fourHundredAndThreeTextWildcardRes) {
+        this.fourHundredAndThreeTextWildcardRes = fourHundredAndThreeTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Resource Not Found
+     */
+    
+    public String fourHundredAndFourTextWildcardRes;
+
+    public GetMsiStatusResponse withFourHundredAndFourTextWildcardRes(String fourHundredAndFourTextWildcardRes) {
+        this.fourHundredAndFourTextWildcardRes = fourHundredAndFourTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unexpected error on the server
+     */
+    
+    public String fiveHundredTextWildcardRes;
+
+    public GetMsiStatusResponse withFiveHundredTextWildcardRes(String fiveHundredTextWildcardRes) {
+        this.fiveHundredTextWildcardRes = fiveHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
      * HTTP response content type for this operation
      */
     
@@ -24,9 +79,9 @@ public class GetMsiStatusResponse {
      * Bad request
      */
     
-    public au.gov.amsa.egc.egc_client.models.shared.Error error;
+    public au.gov.amsa.egc.egc_client.models.shared.ErrorInput error;
 
-    public GetMsiStatusResponse withError(au.gov.amsa.egc.egc_client.models.shared.Error error) {
+    public GetMsiStatusResponse withError(au.gov.amsa.egc.egc_client.models.shared.ErrorInput error) {
         this.error = error;
         return this;
     }
@@ -61,61 +116,6 @@ public class GetMsiStatusResponse {
 
     public GetMsiStatusResponse withStatusExtended(au.gov.amsa.egc.egc_client.models.shared.StatusExtended statusExtended) {
         this.statusExtended = statusExtended;
-        return this;
-    }
-    
-    /**
-     * Bad request
-     */
-    
-    public String getMsiStatus400TextWildcardString;
-
-    public GetMsiStatusResponse withGetMsiStatus400TextWildcardString(String getMsiStatus400TextWildcardString) {
-        this.getMsiStatus400TextWildcardString = getMsiStatus400TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unauthorized (must authenticate)
-     */
-    
-    public String getMsiStatus401TextWildcardString;
-
-    public GetMsiStatusResponse withGetMsiStatus401TextWildcardString(String getMsiStatus401TextWildcardString) {
-        this.getMsiStatus401TextWildcardString = getMsiStatus401TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Not allowed
-     */
-    
-    public String getMsiStatus403TextWildcardString;
-
-    public GetMsiStatusResponse withGetMsiStatus403TextWildcardString(String getMsiStatus403TextWildcardString) {
-        this.getMsiStatus403TextWildcardString = getMsiStatus403TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Resource Not Found
-     */
-    
-    public String getMsiStatus404TextWildcardString;
-
-    public GetMsiStatusResponse withGetMsiStatus404TextWildcardString(String getMsiStatus404TextWildcardString) {
-        this.getMsiStatus404TextWildcardString = getMsiStatus404TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unexpected error on the server
-     */
-    
-    public String getMsiStatus500TextWildcardString;
-
-    public GetMsiStatusResponse withGetMsiStatus500TextWildcardString(String getMsiStatus500TextWildcardString) {
-        this.getMsiStatus500TextWildcardString = getMsiStatus500TextWildcardString;
         return this;
     }
     

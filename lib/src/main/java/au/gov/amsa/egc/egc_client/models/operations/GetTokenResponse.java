@@ -10,6 +10,39 @@ import java.net.http.HttpResponse;
 
 public class GetTokenResponse {
     /**
+     * Bad request
+     */
+    
+    public String fourHundredTextWildcardRes;
+
+    public GetTokenResponse withFourHundredTextWildcardRes(String fourHundredTextWildcardRes) {
+        this.fourHundredTextWildcardRes = fourHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unauthorized (must authenticate)
+     */
+    
+    public String fourHundredAndOneTextWildcardRes;
+
+    public GetTokenResponse withFourHundredAndOneTextWildcardRes(String fourHundredAndOneTextWildcardRes) {
+        this.fourHundredAndOneTextWildcardRes = fourHundredAndOneTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unexpected error on the server
+     */
+    
+    public String fiveHundredTextWildcardRes;
+
+    public GetTokenResponse withFiveHundredTextWildcardRes(String fiveHundredTextWildcardRes) {
+        this.fiveHundredTextWildcardRes = fiveHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
      * token and expiry time
      */
     
@@ -61,39 +94,6 @@ public class GetTokenResponse {
 
     public GetTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
-        return this;
-    }
-    
-    /**
-     * Bad request
-     */
-    
-    public String getToken400TextWildcardString;
-
-    public GetTokenResponse withGetToken400TextWildcardString(String getToken400TextWildcardString) {
-        this.getToken400TextWildcardString = getToken400TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unauthorized (must authenticate)
-     */
-    
-    public String getToken401TextWildcardString;
-
-    public GetTokenResponse withGetToken401TextWildcardString(String getToken401TextWildcardString) {
-        this.getToken401TextWildcardString = getToken401TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unexpected error on the server
-     */
-    
-    public String getToken500TextWildcardString;
-
-    public GetTokenResponse withGetToken500TextWildcardString(String getToken500TextWildcardString) {
-        this.getToken500TextWildcardString = getToken500TextWildcardString;
         return this;
     }
     

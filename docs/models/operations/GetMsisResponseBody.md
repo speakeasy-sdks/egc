@@ -1,4 +1,4 @@
-# GetMsis200ApplicationJSON
+# GetMsisResponseBody
 
 A list of MSIs and an optional continuation token (
 to retrieve the next page of MSIs). If the list of

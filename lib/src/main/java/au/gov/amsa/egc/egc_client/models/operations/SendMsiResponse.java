@@ -10,6 +10,61 @@ import java.net.http.HttpResponse;
 
 public class SendMsiResponse {
     /**
+     * Bad request
+     */
+    
+    public String fourHundredTextWildcardRes;
+
+    public SendMsiResponse withFourHundredTextWildcardRes(String fourHundredTextWildcardRes) {
+        this.fourHundredTextWildcardRes = fourHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unauthorized (must authenticate)
+     */
+    
+    public String fourHundredAndOneTextWildcardRes;
+
+    public SendMsiResponse withFourHundredAndOneTextWildcardRes(String fourHundredAndOneTextWildcardRes) {
+        this.fourHundredAndOneTextWildcardRes = fourHundredAndOneTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Not allowed
+     */
+    
+    public String fourHundredAndThreeTextWildcardRes;
+
+    public SendMsiResponse withFourHundredAndThreeTextWildcardRes(String fourHundredAndThreeTextWildcardRes) {
+        this.fourHundredAndThreeTextWildcardRes = fourHundredAndThreeTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Resource Not Found
+     */
+    
+    public String fourHundredAndFourTextWildcardRes;
+
+    public SendMsiResponse withFourHundredAndFourTextWildcardRes(String fourHundredAndFourTextWildcardRes) {
+        this.fourHundredAndFourTextWildcardRes = fourHundredAndFourTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unexpected error on the server
+     */
+    
+    public String fiveHundredTextWildcardRes;
+
+    public SendMsiResponse withFiveHundredTextWildcardRes(String fiveHundredTextWildcardRes) {
+        this.fiveHundredTextWildcardRes = fiveHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
      * HTTP response content type for this operation
      */
     
@@ -24,9 +79,9 @@ public class SendMsiResponse {
      * Bad request
      */
     
-    public au.gov.amsa.egc.egc_client.models.shared.Error error;
+    public au.gov.amsa.egc.egc_client.models.shared.ErrorInput error;
 
-    public SendMsiResponse withError(au.gov.amsa.egc.egc_client.models.shared.Error error) {
+    public SendMsiResponse withError(au.gov.amsa.egc.egc_client.models.shared.ErrorInput error) {
         this.error = error;
         return this;
     }
@@ -50,61 +105,6 @@ public class SendMsiResponse {
 
     public SendMsiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
-        return this;
-    }
-    
-    /**
-     * Bad request
-     */
-    
-    public String sendMsi400TextWildcardString;
-
-    public SendMsiResponse withSendMsi400TextWildcardString(String sendMsi400TextWildcardString) {
-        this.sendMsi400TextWildcardString = sendMsi400TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unauthorized (must authenticate)
-     */
-    
-    public String sendMsi401TextWildcardString;
-
-    public SendMsiResponse withSendMsi401TextWildcardString(String sendMsi401TextWildcardString) {
-        this.sendMsi401TextWildcardString = sendMsi401TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Not allowed
-     */
-    
-    public String sendMsi403TextWildcardString;
-
-    public SendMsiResponse withSendMsi403TextWildcardString(String sendMsi403TextWildcardString) {
-        this.sendMsi403TextWildcardString = sendMsi403TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Resource Not Found
-     */
-    
-    public String sendMsi404TextWildcardString;
-
-    public SendMsiResponse withSendMsi404TextWildcardString(String sendMsi404TextWildcardString) {
-        this.sendMsi404TextWildcardString = sendMsi404TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unexpected error on the server
-     */
-    
-    public String sendMsi500TextWildcardString;
-
-    public SendMsiResponse withSendMsi500TextWildcardString(String sendMsi500TextWildcardString) {
-        this.sendMsi500TextWildcardString = sendMsi500TextWildcardString;
         return this;
     }
     

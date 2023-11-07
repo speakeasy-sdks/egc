@@ -349,15 +349,15 @@ public class Egc {
 
         au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse(contentType, httpRes.statusCode()) {{
             error = null;
-            cancelMsi400TextWildcardString = null;
+            fourHundredTextWildcardRes = null;
             error = null;
-            cancelMsi401TextWildcardString = null;
+            fourHundredAndOneTextWildcardRes = null;
             error = null;
-            cancelMsi403TextWildcardString = null;
+            fourHundredAndThreeTextWildcardRes = null;
             error = null;
-            cancelMsi404TextWildcardString = null;
+            fourHundredAndFourTextWildcardRes = null;
             error = null;
-            cancelMsi500TextWildcardString = null;
+            fiveHundredTextWildcardRes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -366,56 +366,56 @@ public class Egc {
         else if (httpRes.statusCode() == 400) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.cancelMsi400TextWildcardString = out;
+                res.fourHundredTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.cancelMsi401TextWildcardString = out;
+                res.fourHundredAndOneTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.cancelMsi403TextWildcardString = out;
+                res.fourHundredAndThreeTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 404) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.cancelMsi404TextWildcardString = out;
+                res.fourHundredAndFourTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.cancelMsi500TextWildcardString = out;
+                res.fiveHundredTextWildcardRes = out;
             }
         }
 
@@ -459,66 +459,66 @@ public class Egc {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse(contentType, httpRes.statusCode()) {{
-            msiId = null;
+            twoHundredAndOneApplicationJsonMsiId = null;
             error = null;
-            createMsi400TextWildcardString = null;
+            fourHundredTextWildcardRes = null;
             error = null;
-            createMsi401TextWildcardString = null;
+            fourHundredAndOneTextWildcardRes = null;
             error = null;
-            createMsi403TextWildcardString = null;
+            fourHundredAndThreeTextWildcardRes = null;
             error = null;
-            createMsi500TextWildcardString = null;
+            fiveHundredTextWildcardRes = null;
         }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.msiId = out;
+                res.twoHundredAndOneApplicationJsonMsiId = out;
             }
         }
         else if (httpRes.statusCode() == 400) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.createMsi400TextWildcardString = out;
+                res.fourHundredTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.createMsi401TextWildcardString = out;
+                res.fourHundredAndOneTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.createMsi403TextWildcardString = out;
+                res.fourHundredAndThreeTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.createMsi500TextWildcardString = out;
+                res.fiveHundredTextWildcardRes = out;
             }
         }
 
@@ -551,17 +551,17 @@ public class Egc {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse(contentType, httpRes.statusCode()) {{
-            msi = null;
+            twoHundredApplicationJsonMsi = null;
             error = null;
-            getMsi400TextWildcardString = null;
+            fourHundredTextWildcardRes = null;
             error = null;
-            getMsi401TextWildcardString = null;
+            fourHundredAndOneTextWildcardRes = null;
             error = null;
-            getMsi403TextWildcardString = null;
+            fourHundredAndThreeTextWildcardRes = null;
             error = null;
-            getMsi404TextWildcardString = null;
+            fourHundredAndFourTextWildcardRes = null;
             error = null;
-            getMsi500TextWildcardString = null;
+            fiveHundredTextWildcardRes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -569,62 +569,62 @@ public class Egc {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.msi = out;
+                res.twoHundredApplicationJsonMsi = out;
             }
         }
         else if (httpRes.statusCode() == 400) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsi400TextWildcardString = out;
+                res.fourHundredTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsi401TextWildcardString = out;
+                res.fourHundredAndOneTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsi403TextWildcardString = out;
+                res.fourHundredAndThreeTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 404) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsi404TextWildcardString = out;
+                res.fourHundredAndFourTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsi500TextWildcardString = out;
+                res.fiveHundredTextWildcardRes = out;
             }
         }
 
@@ -659,15 +659,15 @@ public class Egc {
         au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse(contentType, httpRes.statusCode()) {{
             statusExtended = null;
             error = null;
-            getMsiStatus400TextWildcardString = null;
+            fourHundredTextWildcardRes = null;
             error = null;
-            getMsiStatus401TextWildcardString = null;
+            fourHundredAndOneTextWildcardRes = null;
             error = null;
-            getMsiStatus403TextWildcardString = null;
+            fourHundredAndThreeTextWildcardRes = null;
             error = null;
-            getMsiStatus404TextWildcardString = null;
+            fourHundredAndFourTextWildcardRes = null;
             error = null;
-            getMsiStatus500TextWildcardString = null;
+            fiveHundredTextWildcardRes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -681,56 +681,56 @@ public class Egc {
         else if (httpRes.statusCode() == 400) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsiStatus400TextWildcardString = out;
+                res.fourHundredTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsiStatus401TextWildcardString = out;
+                res.fourHundredAndOneTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsiStatus403TextWildcardString = out;
+                res.fourHundredAndThreeTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 404) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsiStatus404TextWildcardString = out;
+                res.fourHundredAndFourTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsiStatus500TextWildcardString = out;
+                res.fiveHundredTextWildcardRes = out;
             }
         }
 
@@ -783,67 +783,67 @@ public class Egc {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse(contentType, httpRes.statusCode()) {{
-            getMsis200ApplicationJSONObject = null;
+            twoHundredApplicationJsonObject = null;
             error = null;
-            getMsis400TextWildcardString = null;
+            fourHundredTextWildcardRes = null;
             error = null;
-            getMsis401TextWildcardString = null;
+            fourHundredAndOneTextWildcardRes = null;
             error = null;
-            getMsis403TextWildcardString = null;
+            fourHundredAndThreeTextWildcardRes = null;
             error = null;
-            getMsis500TextWildcardString = null;
+            fiveHundredTextWildcardRes = null;
         }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.operations.GetMsis200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.operations.GetMsis200ApplicationJSON.class);
-                res.getMsis200ApplicationJSONObject = out;
+                au.gov.amsa.egc.egc_client.models.operations.GetMsisResponseBody out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.operations.GetMsisResponseBody.class);
+                res.twoHundredApplicationJsonObject = out;
             }
         }
         else if (httpRes.statusCode() == 400) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsis400TextWildcardString = out;
+                res.fourHundredTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsis401TextWildcardString = out;
+                res.fourHundredAndOneTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsis403TextWildcardString = out;
+                res.fourHundredAndThreeTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMsis500TextWildcardString = out;
+                res.fiveHundredTextWildcardRes = out;
             }
         }
 
@@ -885,11 +885,11 @@ public class Egc {
         au.gov.amsa.egc.egc_client.models.operations.GetTokenResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetTokenResponse(contentType, httpRes.statusCode()) {{
             authenticationResponse = null;
             error = null;
-            getToken400TextWildcardString = null;
+            fourHundredTextWildcardRes = null;
             error = null;
-            getToken401TextWildcardString = null;
+            fourHundredAndOneTextWildcardRes = null;
             error = null;
-            getToken500TextWildcardString = null;
+            fiveHundredTextWildcardRes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -908,7 +908,7 @@ public class Egc {
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getToken400TextWildcardString = out;
+                res.fourHundredTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
@@ -919,7 +919,7 @@ public class Egc {
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getToken401TextWildcardString = out;
+                res.fourHundredAndOneTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
@@ -930,7 +930,7 @@ public class Egc {
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getToken500TextWildcardString = out;
+                res.fiveHundredTextWildcardRes = out;
             }
         }
 
@@ -966,15 +966,15 @@ public class Egc {
 
         au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse(contentType, httpRes.statusCode()) {{
             error = null;
-            sendMsi400TextWildcardString = null;
+            fourHundredTextWildcardRes = null;
             error = null;
-            sendMsi401TextWildcardString = null;
+            fourHundredAndOneTextWildcardRes = null;
             error = null;
-            sendMsi403TextWildcardString = null;
+            fourHundredAndThreeTextWildcardRes = null;
             error = null;
-            sendMsi404TextWildcardString = null;
+            fourHundredAndFourTextWildcardRes = null;
             error = null;
-            sendMsi500TextWildcardString = null;
+            fiveHundredTextWildcardRes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -983,56 +983,56 @@ public class Egc {
         else if (httpRes.statusCode() == 400) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.sendMsi400TextWildcardString = out;
+                res.fourHundredTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.sendMsi401TextWildcardString = out;
+                res.fourHundredAndOneTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.sendMsi403TextWildcardString = out;
+                res.fourHundredAndThreeTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 404) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.sendMsi404TextWildcardString = out;
+                res.fourHundredAndFourTextWildcardRes = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                au.gov.amsa.egc.egc_client.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.Error.class);
+                au.gov.amsa.egc.egc_client.models.shared.ErrorInput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), au.gov.amsa.egc.egc_client.models.shared.ErrorInput.class);
                 res.error = out;
             }
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "text/*")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.sendMsi500TextWildcardString = out;
+                res.fiveHundredTextWildcardRes = out;
             }
         }
 

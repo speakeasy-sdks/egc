@@ -10,6 +10,72 @@ import java.net.http.HttpResponse;
 
 public class GetMsiResponse {
     /**
+     * OK
+     */
+    
+    public java.util.Map<String, Object> twoHundredApplicationJsonMsi;
+
+    public GetMsiResponse withTwoHundredApplicationJsonMsi(java.util.Map<String, Object> twoHundredApplicationJsonMsi) {
+        this.twoHundredApplicationJsonMsi = twoHundredApplicationJsonMsi;
+        return this;
+    }
+    
+    /**
+     * Bad request
+     */
+    
+    public String fourHundredTextWildcardRes;
+
+    public GetMsiResponse withFourHundredTextWildcardRes(String fourHundredTextWildcardRes) {
+        this.fourHundredTextWildcardRes = fourHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unauthorized (must authenticate)
+     */
+    
+    public String fourHundredAndOneTextWildcardRes;
+
+    public GetMsiResponse withFourHundredAndOneTextWildcardRes(String fourHundredAndOneTextWildcardRes) {
+        this.fourHundredAndOneTextWildcardRes = fourHundredAndOneTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Not allowed
+     */
+    
+    public String fourHundredAndThreeTextWildcardRes;
+
+    public GetMsiResponse withFourHundredAndThreeTextWildcardRes(String fourHundredAndThreeTextWildcardRes) {
+        this.fourHundredAndThreeTextWildcardRes = fourHundredAndThreeTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Resource Not Found
+     */
+    
+    public String fourHundredAndFourTextWildcardRes;
+
+    public GetMsiResponse withFourHundredAndFourTextWildcardRes(String fourHundredAndFourTextWildcardRes) {
+        this.fourHundredAndFourTextWildcardRes = fourHundredAndFourTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unexpected error on the server
+     */
+    
+    public String fiveHundredTextWildcardRes;
+
+    public GetMsiResponse withFiveHundredTextWildcardRes(String fiveHundredTextWildcardRes) {
+        this.fiveHundredTextWildcardRes = fiveHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
      * HTTP response content type for this operation
      */
     
@@ -24,21 +90,10 @@ public class GetMsiResponse {
      * Bad request
      */
     
-    public au.gov.amsa.egc.egc_client.models.shared.Error error;
+    public au.gov.amsa.egc.egc_client.models.shared.ErrorInput error;
 
-    public GetMsiResponse withError(au.gov.amsa.egc.egc_client.models.shared.Error error) {
+    public GetMsiResponse withError(au.gov.amsa.egc.egc_client.models.shared.ErrorInput error) {
         this.error = error;
-        return this;
-    }
-    
-    /**
-     * OK
-     */
-    
-    public java.util.Map<String, Object> msi;
-
-    public GetMsiResponse withMsi(java.util.Map<String, Object> msi) {
-        this.msi = msi;
         return this;
     }
     
@@ -61,61 +116,6 @@ public class GetMsiResponse {
 
     public GetMsiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
-        return this;
-    }
-    
-    /**
-     * Bad request
-     */
-    
-    public String getMsi400TextWildcardString;
-
-    public GetMsiResponse withGetMsi400TextWildcardString(String getMsi400TextWildcardString) {
-        this.getMsi400TextWildcardString = getMsi400TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unauthorized (must authenticate)
-     */
-    
-    public String getMsi401TextWildcardString;
-
-    public GetMsiResponse withGetMsi401TextWildcardString(String getMsi401TextWildcardString) {
-        this.getMsi401TextWildcardString = getMsi401TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Not allowed
-     */
-    
-    public String getMsi403TextWildcardString;
-
-    public GetMsiResponse withGetMsi403TextWildcardString(String getMsi403TextWildcardString) {
-        this.getMsi403TextWildcardString = getMsi403TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Resource Not Found
-     */
-    
-    public String getMsi404TextWildcardString;
-
-    public GetMsiResponse withGetMsi404TextWildcardString(String getMsi404TextWildcardString) {
-        this.getMsi404TextWildcardString = getMsi404TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unexpected error on the server
-     */
-    
-    public String getMsi500TextWildcardString;
-
-    public GetMsiResponse withGetMsi500TextWildcardString(String getMsi500TextWildcardString) {
-        this.getMsi500TextWildcardString = getMsi500TextWildcardString;
         return this;
     }
     

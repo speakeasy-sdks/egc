@@ -10,6 +10,61 @@ import java.net.http.HttpResponse;
 
 public class CreateMsiResponse {
     /**
+     * The unique identifier of the newly created MSI
+     */
+    
+    public String twoHundredAndOneApplicationJsonMsiId;
+
+    public CreateMsiResponse withTwoHundredAndOneApplicationJsonMsiId(String twoHundredAndOneApplicationJsonMsiId) {
+        this.twoHundredAndOneApplicationJsonMsiId = twoHundredAndOneApplicationJsonMsiId;
+        return this;
+    }
+    
+    /**
+     * Bad request
+     */
+    
+    public String fourHundredTextWildcardRes;
+
+    public CreateMsiResponse withFourHundredTextWildcardRes(String fourHundredTextWildcardRes) {
+        this.fourHundredTextWildcardRes = fourHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unauthorized (must authenticate)
+     */
+    
+    public String fourHundredAndOneTextWildcardRes;
+
+    public CreateMsiResponse withFourHundredAndOneTextWildcardRes(String fourHundredAndOneTextWildcardRes) {
+        this.fourHundredAndOneTextWildcardRes = fourHundredAndOneTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Not allowed
+     */
+    
+    public String fourHundredAndThreeTextWildcardRes;
+
+    public CreateMsiResponse withFourHundredAndThreeTextWildcardRes(String fourHundredAndThreeTextWildcardRes) {
+        this.fourHundredAndThreeTextWildcardRes = fourHundredAndThreeTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unexpected error on the server
+     */
+    
+    public String fiveHundredTextWildcardRes;
+
+    public CreateMsiResponse withFiveHundredTextWildcardRes(String fiveHundredTextWildcardRes) {
+        this.fiveHundredTextWildcardRes = fiveHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
      * HTTP response content type for this operation
      */
     
@@ -24,21 +79,10 @@ public class CreateMsiResponse {
      * Bad request
      */
     
-    public au.gov.amsa.egc.egc_client.models.shared.Error error;
+    public au.gov.amsa.egc.egc_client.models.shared.ErrorInput error;
 
-    public CreateMsiResponse withError(au.gov.amsa.egc.egc_client.models.shared.Error error) {
+    public CreateMsiResponse withError(au.gov.amsa.egc.egc_client.models.shared.ErrorInput error) {
         this.error = error;
-        return this;
-    }
-    
-    /**
-     * The unique identifier of the newly created MSI
-     */
-    
-    public String msiId;
-
-    public CreateMsiResponse withMsiId(String msiId) {
-        this.msiId = msiId;
         return this;
     }
     
@@ -61,50 +105,6 @@ public class CreateMsiResponse {
 
     public CreateMsiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
-        return this;
-    }
-    
-    /**
-     * Bad request
-     */
-    
-    public String createMsi400TextWildcardString;
-
-    public CreateMsiResponse withCreateMsi400TextWildcardString(String createMsi400TextWildcardString) {
-        this.createMsi400TextWildcardString = createMsi400TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unauthorized (must authenticate)
-     */
-    
-    public String createMsi401TextWildcardString;
-
-    public CreateMsiResponse withCreateMsi401TextWildcardString(String createMsi401TextWildcardString) {
-        this.createMsi401TextWildcardString = createMsi401TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Not allowed
-     */
-    
-    public String createMsi403TextWildcardString;
-
-    public CreateMsiResponse withCreateMsi403TextWildcardString(String createMsi403TextWildcardString) {
-        this.createMsi403TextWildcardString = createMsi403TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unexpected error on the server
-     */
-    
-    public String createMsi500TextWildcardString;
-
-    public CreateMsiResponse withCreateMsi500TextWildcardString(String createMsi500TextWildcardString) {
-        this.createMsi500TextWildcardString = createMsi500TextWildcardString;
         return this;
     }
     

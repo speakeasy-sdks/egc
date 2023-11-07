@@ -219,7 +219,7 @@ public class Application {
 
             CancelMsiRequest req = new CancelMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            CancelMsiResponse res = sdk.egc.cancelMsi(req);
+            CancelMsiResponse res = sdk.cancelMsi(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -286,9 +286,9 @@ public class Application {
                 startTime = OffsetDateTime.parse("2022-04-23T10:30:43.511Z");
             }};            
 
-            CreateMsiResponse res = sdk.egc.createMsi(req);
+            CreateMsiResponse res = sdk.createMsi(req);
 
-            if (res.msiId != null) {
+            if (res.twoHundredAndOneApplicationJsonMsiId != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -336,9 +336,9 @@ public class Application {
 
             GetMsiRequest req = new GetMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            GetMsiResponse res = sdk.egc.getMsi(req);
+            GetMsiResponse res = sdk.getMsi(req);
 
-            if (res.msi != null) {
+            if (res.twoHundredApplicationJsonMsi != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -386,7 +386,7 @@ public class Application {
 
             GetMsiStatusRequest req = new GetMsiStatusRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            GetMsiStatusResponse res = sdk.egc.getMsiStatus(req);
+            GetMsiStatusResponse res = sdk.getMsiStatus(req);
 
             if (res.statusExtended != null) {
                 // handle response
@@ -469,9 +469,9 @@ public class Application {
                 }};
             }};            
 
-            GetMsisResponse res = sdk.egc.getMsis(req);
+            GetMsisResponse res = sdk.getMsis(req);
 
-            if (res.getMsis200ApplicationJSONObject != null) {
+            if (res.twoHundredApplicationJsonObject != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -523,7 +523,7 @@ public class Application {
                 validityMinutes = 60;
             }};            
 
-            GetTokenResponse res = sdk.egc.getToken(req);
+            GetTokenResponse res = sdk.getToken(req);
 
             if (res.authenticationResponse != null) {
                 // handle response
@@ -575,7 +575,7 @@ public class Application {
 
             SendMsiRequest req = new SendMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            SendMsiResponse res = sdk.egc.sendMsi(req);
+            SendMsiResponse res = sdk.sendMsi(req);
 
             if (res.statusCode == 200) {
                 // handle response

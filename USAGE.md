@@ -20,7 +20,7 @@ public class Application {
 
             CancelMsiRequest req = new CancelMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
 
-            CancelMsiResponse res = sdk.egc.cancelMsi(req);
+            CancelMsiResponse res = sdk.cancelMsi(req);
 
             if (res.statusCode == 200) {
                 // handle response

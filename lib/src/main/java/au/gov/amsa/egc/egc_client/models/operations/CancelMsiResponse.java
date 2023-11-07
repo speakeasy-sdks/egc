@@ -10,6 +10,61 @@ import java.net.http.HttpResponse;
 
 public class CancelMsiResponse {
     /**
+     * Bad request
+     */
+    
+    public String fourHundredTextWildcardRes;
+
+    public CancelMsiResponse withFourHundredTextWildcardRes(String fourHundredTextWildcardRes) {
+        this.fourHundredTextWildcardRes = fourHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unauthorized (must authenticate)
+     */
+    
+    public String fourHundredAndOneTextWildcardRes;
+
+    public CancelMsiResponse withFourHundredAndOneTextWildcardRes(String fourHundredAndOneTextWildcardRes) {
+        this.fourHundredAndOneTextWildcardRes = fourHundredAndOneTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Not allowed
+     */
+    
+    public String fourHundredAndThreeTextWildcardRes;
+
+    public CancelMsiResponse withFourHundredAndThreeTextWildcardRes(String fourHundredAndThreeTextWildcardRes) {
+        this.fourHundredAndThreeTextWildcardRes = fourHundredAndThreeTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Resource Not Found
+     */
+    
+    public String fourHundredAndFourTextWildcardRes;
+
+    public CancelMsiResponse withFourHundredAndFourTextWildcardRes(String fourHundredAndFourTextWildcardRes) {
+        this.fourHundredAndFourTextWildcardRes = fourHundredAndFourTextWildcardRes;
+        return this;
+    }
+    
+    /**
+     * Unexpected error on the server
+     */
+    
+    public String fiveHundredTextWildcardRes;
+
+    public CancelMsiResponse withFiveHundredTextWildcardRes(String fiveHundredTextWildcardRes) {
+        this.fiveHundredTextWildcardRes = fiveHundredTextWildcardRes;
+        return this;
+    }
+    
+    /**
      * HTTP response content type for this operation
      */
     
@@ -24,9 +79,9 @@ public class CancelMsiResponse {
      * Bad request
      */
     
-    public au.gov.amsa.egc.egc_client.models.shared.Error error;
+    public au.gov.amsa.egc.egc_client.models.shared.ErrorInput error;
 
-    public CancelMsiResponse withError(au.gov.amsa.egc.egc_client.models.shared.Error error) {
+    public CancelMsiResponse withError(au.gov.amsa.egc.egc_client.models.shared.ErrorInput error) {
         this.error = error;
         return this;
     }
@@ -50,61 +105,6 @@ public class CancelMsiResponse {
 
     public CancelMsiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
-        return this;
-    }
-    
-    /**
-     * Bad request
-     */
-    
-    public String cancelMsi400TextWildcardString;
-
-    public CancelMsiResponse withCancelMsi400TextWildcardString(String cancelMsi400TextWildcardString) {
-        this.cancelMsi400TextWildcardString = cancelMsi400TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unauthorized (must authenticate)
-     */
-    
-    public String cancelMsi401TextWildcardString;
-
-    public CancelMsiResponse withCancelMsi401TextWildcardString(String cancelMsi401TextWildcardString) {
-        this.cancelMsi401TextWildcardString = cancelMsi401TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Not allowed
-     */
-    
-    public String cancelMsi403TextWildcardString;
-
-    public CancelMsiResponse withCancelMsi403TextWildcardString(String cancelMsi403TextWildcardString) {
-        this.cancelMsi403TextWildcardString = cancelMsi403TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Resource Not Found
-     */
-    
-    public String cancelMsi404TextWildcardString;
-
-    public CancelMsiResponse withCancelMsi404TextWildcardString(String cancelMsi404TextWildcardString) {
-        this.cancelMsi404TextWildcardString = cancelMsi404TextWildcardString;
-        return this;
-    }
-    
-    /**
-     * Unexpected error on the server
-     */
-    
-    public String cancelMsi500TextWildcardString;
-
-    public CancelMsiResponse withCancelMsi500TextWildcardString(String cancelMsi500TextWildcardString) {
-        this.cancelMsi500TextWildcardString = cancelMsi500TextWildcardString;
         return this;
     }
     

@@ -2,30 +2,34 @@ configVersion: 1.0.0
 management:
   docChecksum: 690ffd210b205fa6d398ef3fa587c1d5
   docVersion: 1.0-alpha
-  speakeasyVersion: 1.104.0
-  generationVersion: 2.169.0
+  speakeasyVersion: 1.114.1
+  generationVersion: 2.181.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  repoURL: https://github.com/speakeasy-sdks/egc.git
+  comments: {}
   sdkClassName: egc
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/speakeasy-sdks/egc.git
 features:
   java:
-    core: 2.94.0
+    core: 3.0.1
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
+    inputOutputModels: 2.81.1
 java:
-  version: 0.9.0
+  version: 0.10.0
   artifactID: egc-client
   companyEmail: info@mycompany.com
   companyName: My Company
   companyURL: www.mycompany.com
   githubURL: github.com/owner/repo
   groupID: au.gov.amsa.egc
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/errors
+      operations: models/operations
+      shared: models/shared
+      webhooks: models/webhooks
   maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   projectName: egc
