@@ -42,8 +42,8 @@ lib/src/main/java/au/gov/amsa/egc/egc_client/models/operations/GetMsisResponse.j
 lib/src/main/java/au/gov/amsa/egc/egc_client/models/operations/GetTokenResponse.java
 lib/src/main/java/au/gov/amsa/egc/egc_client/models/operations/SendMsiRequest.java
 lib/src/main/java/au/gov/amsa/egc/egc_client/models/operations/SendMsiResponse.java
-lib/src/main/java/au/gov/amsa/egc/egc_client/models/shared/Error.java
 lib/src/main/java/au/gov/amsa/egc/egc_client/models/shared/ErrorInput.java
+lib/src/main/java/au/gov/amsa/egc/egc_client/models/shared/Error.java
 lib/src/main/java/au/gov/amsa/egc/egc_client/models/shared/MsiContent.java
 lib/src/main/java/au/gov/amsa/egc/egc_client/models/shared/Repetition.java
 lib/src/main/java/au/gov/amsa/egc/egc_client/models/shared/NumRepetitions.java
@@ -68,8 +68,8 @@ docs/models/operations/GetMsisResponse.md
 docs/models/operations/GetTokenResponse.md
 docs/models/operations/SendMsiRequest.md
 docs/models/operations/SendMsiResponse.md
-docs/models/shared/Error.md
 docs/models/shared/ErrorInput.md
+docs/models/shared/Error.md
 docs/models/shared/MsiContent.md
 docs/models/shared/Repetition.md
 docs/models/shared/NumRepetitions.md
