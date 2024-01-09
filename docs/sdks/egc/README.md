@@ -212,14 +212,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("string"){{
-                    bearer = "";
+                .setSecurity(new Security(
+                ){{
+                    bearer = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
-            CancelMsiRequest req = new CancelMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
+            au.gov.amsa.egc.egc_client.models.operations.CancelMsiRequest req = new CancelMsiRequest(
+                "289ee192-fdf5-4070-befc-3bf7291c1386");
 
-            CancelMsiResponse res = sdk.cancelMsi(req);
+            au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse res = sdk.cancelMsi(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -272,21 +274,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("string"){{
-                    bearer = "";
+                .setSecurity(new Security(
+                ){{
+                    bearer = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
-            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent("string", "a message to be broadcast"){{
+            au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent(
+                "string",
+                "a message to be broadcast"){{
                 echo = false;
                 endTime = OffsetDateTime.parse("2022-04-24T10:25:43.511Z");
                 readAcksEnabled = false;
                 receiveAcksEnabled = false;
-                repetition = new Repetition(IntervalHours.SIXTY, NumRepetitions.TILL_CANCELLED);
+                repetition = new Repetition(
+                    IntervalHours.SIXTY,
+                    NumRepetitions.TILL_CANCELLED);
                 startTime = OffsetDateTime.parse("2022-04-23T10:30:43.511Z");
-            }};            
 
-            CreateMsiResponse res = sdk.createMsi(req);
+            }};
+
+            au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse res = sdk.createMsi(req);
 
             if (res.twoHundredAndOneApplicationJsonMsiId != null) {
                 // handle response
@@ -329,14 +337,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("string"){{
-                    bearer = "";
+                .setSecurity(new Security(
+                ){{
+                    bearer = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
-            GetMsiRequest req = new GetMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
+            au.gov.amsa.egc.egc_client.models.operations.GetMsiRequest req = new GetMsiRequest(
+                "289ee192-fdf5-4070-befc-3bf7291c1386");
 
-            GetMsiResponse res = sdk.getMsi(req);
+            au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse res = sdk.getMsi(req);
 
             if (res.twoHundredApplicationJsonMsi != null) {
                 // handle response
@@ -379,14 +389,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("string"){{
-                    bearer = "";
+                .setSecurity(new Security(
+                ){{
+                    bearer = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
-            GetMsiStatusRequest req = new GetMsiStatusRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
+            au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusRequest req = new GetMsiStatusRequest(
+                "289ee192-fdf5-4070-befc-3bf7291c1386");
 
-            GetMsiStatusResponse res = sdk.getMsiStatus(req);
+            au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse res = sdk.getMsiStatus(req);
 
             if (res.statusExtended != null) {
                 // handle response
@@ -446,12 +458,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("string"){{
-                    bearer = "";
+                .setSecurity(new Security(
+                ){{
+                    bearer = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
-            GetMsisRequest req = new GetMsisRequest(){{
+            au.gov.amsa.egc.egc_client.models.operations.GetMsisRequest req = new GetMsisRequest(
+){{
                 broadcastType = BroadcastType.SAR_BROADCAST;
                 continuationToken = "10";
                 endTimeMax = OffsetDateTime.parse("2022-04-25T14:18:23.000Z");
@@ -467,9 +481,10 @@ public class Application {
                     add(Status.CREATED),
                     add(Status.CANCELLED),
                 }};
-            }};            
 
-            GetMsisResponse res = sdk.getMsis(req);
+            }};
+
+            au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse res = sdk.getMsis(req);
 
             if (res.twoHundredApplicationJsonObject != null) {
                 // handle response
@@ -514,16 +529,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("string"){{
-                    bearer = "";
+                .setSecurity(new Security(
+                ){{
+                    bearer = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
-            au.gov.amsa.egc.egc_client.models.shared.AuthenticationRequestBody req = new AuthenticationRequestBody("a-nice-strong-password", "myrcc"){{
+            au.gov.amsa.egc.egc_client.models.shared.AuthenticationRequestBody req = new AuthenticationRequestBody(
+                "a-nice-strong-password",
+                "myrcc"){{
                 validityMinutes = 60;
-            }};            
 
-            GetTokenResponse res = sdk.getToken(req);
+            }};
+
+            au.gov.amsa.egc.egc_client.models.operations.GetTokenResponse res = sdk.getToken(req);
 
             if (res.authenticationResponse != null) {
                 // handle response
@@ -568,14 +587,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("string"){{
-                    bearer = "";
+                .setSecurity(new Security(
+                ){{
+                    bearer = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
-            SendMsiRequest req = new SendMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
+            au.gov.amsa.egc.egc_client.models.operations.SendMsiRequest req = new SendMsiRequest(
+                "289ee192-fdf5-4070-befc-3bf7291c1386");
 
-            SendMsiResponse res = sdk.sendMsi(req);
+            au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse res = sdk.sendMsi(req);
 
             if (res.statusCode == 200) {
                 // handle response

@@ -5,7 +5,6 @@
 package au.gov.amsa.egc.egc_client.models.shared;
 
 import au.gov.amsa.egc.egc_client.utils.SpeakeasyMetadata;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class Security {
@@ -17,7 +16,5 @@ public class Security {
         return this;
     }
     
-    public Security(@JsonProperty("bearer") String bearer) {
-        this.bearer = bearer;
-  }
+    public Security(){}
 }

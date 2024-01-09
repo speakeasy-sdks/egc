@@ -1,21 +1,12 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 690ffd210b205fa6d398ef3fa587c1d5
-  docVersion: 1.0-alpha
-  speakeasyVersion: 1.116.0
-  generationVersion: 2.185.0
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: egc
-  repoURL: https://github.com/speakeasy-sdks/egc.git
-features:
-  java:
-    core: 3.0.2
-    globalSecurity: 2.81.1
-    globalServerURLs: 2.82.0
-    inputOutputModels: 2.82.0
+  usageSnippets:
+    optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
 java:
-  version: 0.11.0
+  version: 0.12.0
   artifactID: egc-client
   companyEmail: info@mycompany.com
   companyName: My Company
@@ -35,5 +26,3 @@ java:
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   outputModelSuffix: output
   projectName: egc
-  published: true
-  repoSubDirectory: .

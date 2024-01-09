@@ -346,8 +346,8 @@ public class Egc {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse(contentType, httpRes.statusCode()) {{
+        
+        au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse(contentType, httpRes.statusCode(), httpRes) {{
             error = null;
             fourHundredTextWildcardRes = null;
             error = null;
@@ -359,7 +359,6 @@ public class Egc {
             error = null;
             fiveHundredTextWildcardRes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
         }
@@ -457,8 +456,8 @@ public class Egc {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse(contentType, httpRes.statusCode()) {{
+        
+        au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.CreateMsiResponse(contentType, httpRes.statusCode(), httpRes) {{
             twoHundredAndOneApplicationJsonMsiId = null;
             error = null;
             fourHundredTextWildcardRes = null;
@@ -469,7 +468,6 @@ public class Egc {
             error = null;
             fiveHundredTextWildcardRes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -549,8 +547,8 @@ public class Egc {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse(contentType, httpRes.statusCode()) {{
+        
+        au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetMsiResponse(contentType, httpRes.statusCode(), httpRes) {{
             twoHundredApplicationJsonMsi = null;
             error = null;
             fourHundredTextWildcardRes = null;
@@ -563,7 +561,6 @@ public class Egc {
             error = null;
             fiveHundredTextWildcardRes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -655,8 +652,8 @@ public class Egc {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse(contentType, httpRes.statusCode()) {{
+        
+        au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetMsiStatusResponse(contentType, httpRes.statusCode(), httpRes) {{
             statusExtended = null;
             error = null;
             fourHundredTextWildcardRes = null;
@@ -669,7 +666,6 @@ public class Egc {
             error = null;
             fiveHundredTextWildcardRes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -781,8 +777,8 @@ public class Egc {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse(contentType, httpRes.statusCode()) {{
+        
+        au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetMsisResponse(contentType, httpRes.statusCode(), httpRes) {{
             twoHundredApplicationJsonObject = null;
             error = null;
             fourHundredTextWildcardRes = null;
@@ -793,7 +789,6 @@ public class Egc {
             error = null;
             fiveHundredTextWildcardRes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -881,8 +876,8 @@ public class Egc {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        au.gov.amsa.egc.egc_client.models.operations.GetTokenResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetTokenResponse(contentType, httpRes.statusCode()) {{
+        
+        au.gov.amsa.egc.egc_client.models.operations.GetTokenResponse res = new au.gov.amsa.egc.egc_client.models.operations.GetTokenResponse(contentType, httpRes.statusCode(), httpRes) {{
             authenticationResponse = null;
             error = null;
             fourHundredTextWildcardRes = null;
@@ -891,7 +886,6 @@ public class Egc {
             error = null;
             fiveHundredTextWildcardRes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -963,8 +957,8 @@ public class Egc {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse(contentType, httpRes.statusCode()) {{
+        
+        au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse res = new au.gov.amsa.egc.egc_client.models.operations.SendMsiResponse(contentType, httpRes.statusCode(), httpRes) {{
             error = null;
             fourHundredTextWildcardRes = null;
             error = null;
@@ -976,7 +970,6 @@ public class Egc {
             error = null;
             fiveHundredTextWildcardRes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
         }

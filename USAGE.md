@@ -1,6 +1,4 @@
-<!-- Start SDK Example Usage -->
-
-
+<!-- Start SDK Example Usage [usage] -->
 ```java
 package hello.world;
 
@@ -13,14 +11,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Egc sdk = Egc.builder()
-                .setSecurity(new Security("string"){{
-                    bearer = "";
+                .setSecurity(new Security(
+                ){{
+                    bearer = "<YOUR_BEARER_TOKEN_HERE>";
                 }})
                 .build();
 
-            CancelMsiRequest req = new CancelMsiRequest("289ee192-fdf5-4070-befc-3bf7291c1386");            
+            au.gov.amsa.egc.egc_client.models.operations.CancelMsiRequest req = new CancelMsiRequest(
+                "289ee192-fdf5-4070-befc-3bf7291c1386");
 
-            CancelMsiResponse res = sdk.cancelMsi(req);
+            au.gov.amsa.egc.egc_client.models.operations.CancelMsiResponse res = sdk.cancelMsi(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -31,4 +31,4 @@ public class Application {
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
