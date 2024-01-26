@@ -26,9 +26,9 @@ public class MsiContent {
      * the details of the broadcast particular to the broadcast type
      */
     @JsonProperty("broadcast")
-    public Object broadcast;
+    public java.lang.Object broadcast;
 
-    public MsiContent withBroadcast(Object broadcast) {
+    public MsiContent withBroadcast(java.lang.Object broadcast) {
         this.broadcast = broadcast;
         return this;
     }
@@ -135,7 +135,7 @@ public class MsiContent {
         return this;
     }
     
-    public MsiContent(@JsonProperty("broadcast") Object broadcast, @JsonProperty("payload") String payload) {
+    public MsiContent(@JsonProperty("broadcast") java.lang.Object broadcast, @JsonProperty("payload") String payload) {
         this.broadcast = broadcast;
         this.payload = payload;
   }

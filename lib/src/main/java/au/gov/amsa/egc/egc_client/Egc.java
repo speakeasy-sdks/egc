@@ -565,7 +565,7 @@ public class Egc {
         if (httpRes.statusCode() == 200) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                java.util.Map<String, java.lang.Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, java.lang.Object>>() {});
                 res.twoHundredApplicationJsonMsi = out;
             }
         }

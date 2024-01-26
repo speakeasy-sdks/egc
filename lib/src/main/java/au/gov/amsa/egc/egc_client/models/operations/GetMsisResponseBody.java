@@ -32,14 +32,14 @@ public class GetMsisResponseBody {
     }
     
     @JsonProperty("msis")
-    public java.util.Map<String, Object>[] msis;
+    public java.util.Map<String, java.lang.Object>[] msis;
 
-    public GetMsisResponseBody withMsis(java.util.Map<String, Object>[] msis) {
+    public GetMsisResponseBody withMsis(java.util.Map<String, java.lang.Object>[] msis) {
         this.msis = msis;
         return this;
     }
     
-    public GetMsisResponseBody(@JsonProperty("msis") java.util.Map<String, Object>[] msis) {
+    public GetMsisResponseBody(@JsonProperty("msis") java.util.Map<String, java.lang.Object>[] msis) {
         this.msis = msis;
   }
 }

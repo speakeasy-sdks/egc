@@ -13,9 +13,9 @@ public class GetMsiResponse {
      * OK
      */
     
-    public java.util.Map<String, Object> twoHundredApplicationJsonMsi;
+    public java.util.Map<String, java.lang.Object> twoHundredApplicationJsonMsi;
 
-    public GetMsiResponse withTwoHundredApplicationJsonMsi(java.util.Map<String, Object> twoHundredApplicationJsonMsi) {
+    public GetMsiResponse withTwoHundredApplicationJsonMsi(java.util.Map<String, java.lang.Object> twoHundredApplicationJsonMsi) {
         this.twoHundredApplicationJsonMsi = twoHundredApplicationJsonMsi;
         return this;
     }
