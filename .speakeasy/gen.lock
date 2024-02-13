@@ -4,9 +4,9 @@ management:
   docChecksum: 690ffd210b205fa6d398ef3fa587c1d5
   docVersion: 1.0-alpha
   speakeasyVersion: internal
-  generationVersion: 2.239.4
-  releaseVersion: 0.13.0
-  configChecksum: 13f1d631f19ee52f48acdad7b7b388cb
+  generationVersion: 2.253.0
+  releaseVersion: 0.13.1
+  configChecksum: c7dc49db433e5f84a91cbe9e818cb0f8
   repoURL: https://github.com/speakeasy-sdks/egc.git
   repoSubDirectory: .
   published: true
