@@ -281,7 +281,7 @@ public class Application {
                 .build();
 
             au.gov.amsa.egc.egc_client.models.shared.MsiContent req = new MsiContent(
-                "string",
+                "<value>",
                 "a message to be broadcast"){{
                 echo = false;
                 endTime = OffsetDateTime.parse("2022-04-24T10:25:43.511Z");
