@@ -167,3 +167,11 @@ Based on:
 - Speakeasy CLI 1.182.0 (2.259.1) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.14.1] .
+
+## 2024-02-24 00:09:30
+### Changes
+Based on:
+- OpenAPI Doc 1.0-alpha 
+- Speakeasy CLI 1.193.4 (2.272.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.14.2] .
