@@ -10,7 +10,7 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: false
 java:
-  version: 0.14.2
+  version: 0.14.3
   artifactID: egc-client
   companyEmail: info@mycompany.com
   companyName: My Company

@@ -471,7 +471,8 @@ public class Egc {
         
         if (httpRes.statusCode() == 201) {
             if (au.gov.amsa.egc.egc_client.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
                 res.twoHundredAndOneApplicationJsonMsiId = out;
             }
         }

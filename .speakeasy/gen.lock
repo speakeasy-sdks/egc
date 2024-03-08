@@ -3,17 +3,17 @@ id: 44d26891-620b-4b79-a8fe-90105594c80d
 management:
   docChecksum: 690ffd210b205fa6d398ef3fa587c1d5
   docVersion: 1.0-alpha
-  speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 0.14.2
-  configChecksum: f4fd81b67ed50cda32a98654e088a5f4
+  speakeasyVersion: 1.204.1
+  generationVersion: 2.279.1
+  releaseVersion: 0.14.3
+  configChecksum: 2ffd71e9bec1e5fc2a9c0a62d93d5f4b
   repoURL: https://github.com/speakeasy-sdks/egc.git
   repoSubDirectory: .
   published: true
 features:
   java:
     core: 3.5.2
-    globalSecurity: 2.81.3
+    globalSecurity: 2.81.4
     globalServerURLs: 2.82.1
     inputOutputModels: 2.83.0
 generatedFiles:
